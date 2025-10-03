@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>Le coin du patin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <button id="toggleMenu" onclick="toggleSidebar()">☰</button>
+<nav id="sidebar">
+  <h1>Le coin du patin</h1>
+  <button onclick="showTab('accueil')">Accueil</button>
+  <button onclick="showTab('service')">Le service</button>
+  <button onclick="showTab('fonctionnement')">Fonctionnement</button>
+  <button onclick="showTab('contact')">Contact</button>
+</nav>
   <style>
     body {
       margin: 0;
@@ -20,6 +28,13 @@
       display: flex;
       flex-direction: column;
       padding-top: 40px;
+      transition: width 0.3s, padding 0.3s;
+    }
+
+    nav.closed {
+      width: 0;
+      padding: 0;
+      overflow: hidden;
     }
 
     nav h1 {
@@ -42,10 +57,29 @@
       background-color: #1abc9c;
     }
 
+    #toggleMenu {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
     main {
       flex-grow: 1;
       padding: 40px;
       overflow-y: auto;
+      transition: margin-left 0.3s;
+      margin-left: 220px;
+    }
+
+    main.shifted {
+      margin-left: 0;
     }
 
     section {
@@ -72,13 +106,7 @@
 </head>
 <body>
 
-  <nav>
-    <h1>Le coin du patin</h1>
-    <button onclick="showTab('accueil')">Accueil</button>
-    <button onclick="showTab('service')">Le service</button>
-    <button onclick="showTab('fonctionnement')">Fonctionnement</button>
-    <button onclick="showTab('contact')">Contact</button>
-  </nav>
+
 
   <main>
     <section id="accueil" class="active">
@@ -179,6 +207,13 @@
     function showTab(id) {
       document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const main = document.querySelector('main');
+      sidebar.classList.toggle('closed');
+      main.classList.toggle('shifted');
     }
   </script>
 
