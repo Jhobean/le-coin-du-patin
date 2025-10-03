@@ -215,6 +215,14 @@
       sidebar.classList.toggle('closed');
       main.classList.toggle('shifted');
     }
+
+    // Fermer le menu automatiquement sur mobile au chargement
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.innerWidth <= 768) {
+        document.getElementById('sidebar').classList.add('closed');
+        document.querySelector('main').classList.add('shifted');
+      }
+    });
   </script>
 
 </body>
