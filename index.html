@@ -6,79 +6,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #f4f4f4;
     }
-    header {
+
+    nav {
+      width: 220px;
       background-color: #2c3e50;
       color: white;
-      padding: 40px 20px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
     }
+
+    nav h1 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      text-align: left;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #1abc9c;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+
     section {
-      padding: 30px 20px;
+      display: none;
       max-width: 800px;
       margin: auto;
     }
+
+    section.active {
+      display: block;
+    }
+
     h2 {
       color: #2c3e50;
-      margin-top: 40px;
+      margin-top: 0;
     }
-    .contact {
-      background-color: #ecf0f1;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 30px;
-    }
+
     footer {
-      background-color: #2c3e50;
-      color: white;
       text-align: center;
-      padding: 20px;
       margin-top: 40px;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <nav>
     <h1>Le coin du patin</h1>
-    <p>Service d’aiguisage de patins pour les étudiants</p>
-  </header>
+    <button onclick="showTab('accueil')">Accueil</button>
+    <button onclick="showTab('service')">Le service</button>
+    <button onclick="showTab('fonctionnement')">Fonctionnement</button>
+    <button onclick="showTab('contact')">Contact</button>
+  </nav>
 
-  <section>
-    <h2>🧊 Le service</h2>
-    <p>Le coin du patin est un service offert aux étudiants pour l’aiguisage de leurs patins. La collecte se fait à l’école après les cours, et le retour est assuré le lendemain matin avant le début des classes. Le paiement se fait par virement Interac.</p>
+  <main>
+    <section id="accueil" class="active">
+      <h2>Bienvenue</h2>
+      <p>Bienvenue sur le site du Coin du Patin, un service d’aiguisage de patins offert aux étudiants par Alexis, élève de secondaire 2.</p>
 
-    <h2>👤 Qui suis-je ?</h2>
-    <p>Je suis <strong>Alexis</strong>, étudiant de secondaire 2. J’ai remarqué que transporter ses patins dans l’autobus pour les faire aiguiser est un vrai casse-tête pour plusieurs joueurs. Comme j’habite à proximité de l’école, j’ai décidé d’offrir ce service pour simplifier la vie de mes camarades.</p>
+    </section>
 
-    <h2>⚙️ Comment ça fonctionne ?</h2>
-    <ul>
-      <li>Remplir le formulaire</li>
-      <li>Le glisser dans vos patins</li>
-      <li>Déposer les patins dans le bac prévu à cet effet</li>
-    </ul>
-
-    <div class="contact">
-      <h2>📞 Me contacter</h2>
-      <p>Alexis<br>
-         Téléphone : <strong>514-441-2813</strong><br>
-         Paiement : Virement Interac
+    <section id="service">
+      <h2>Le service</h2>
+      <p>Ramassage des patins à l’école après les cours, aiguisage à domicile, et retour le lendemain matin avant le début des classes. Paiement par virement Interac.
+        ***Aiguisage de patin de Gardien non possible***
       </p>
-    </div>
-  </section>
 
-  <footer>
-    &copy; 2025 Le coin du patin — Service étudiant par Alexis<br>
-    📺 <a href="https://www.youtube.com/@Alex.gagnon" target="_blank" style="color: #ecf0f1; text-decoration: underline;">
-      Ma chaîne YouTube
-    </a>
-  </footer>
+      <h3>Liste de prix</h3>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+          <tr style="background-color: #2c3e50; color: white;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Service</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Prix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Aiguisage standard</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">8,00 $</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Carte prapayée 5 aiguisages</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">35,00 $</td>
+          </tr>
+
+
+
+
+        </tbody>
+
+
+      </table>
+      <p style="color: red;">
+        ***Aiguisage de patin de Gardien non possible***
+      </p>
+    </section>
+
+    <section id="fonctionnement">
+      <h2>Comment ça fonctionne</h2>
+      <ul>
+        <li>Remplir le formulaire</li>
+        <li>Le glisser dans vos patins</li>
+        <li>Déposer les patins dans le bac prévu au Sportium</li>
+      </ul>
+
+      <h3>Horaire</h3>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+          <tr style="background-color: #2c3e50; color: white;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Jour</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Heures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Lundi</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Ramassage des patins 14h30-14h45</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Mardi</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Retour des patin 7h45-8h15</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Mercredi</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Ramassage des patins 14h30-14h45</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Jeudi</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Retour des patin 7h45-8h15</td>
+          </tr>
+          <tr>
+
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Me contacter</h2>
+      <p>📞 Alexis — 514-441-2813<br>
+         ✉️ Paiement par virement Interac<br>
+         🏫 Étudiant de secondaire 2</p>
+    </section>
+
+    <footer>
+      &copy; 2025 Le coin du patin — Service étudiant par Alexis
+    </footer>
+  </main>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
-
