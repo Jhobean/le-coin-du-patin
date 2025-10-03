@@ -205,17 +205,26 @@
 
   <script>
     function showTab(id) {
+      // Affiche la section sélectionnée
       document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+  
+      // Ferme le menu si il est ouvert
+      const sidebar = document.getElementById('sidebar');
+      const main = document.querySelector('main');
+      if (!sidebar.classList.contains('closed')) {
+        sidebar.classList.add('closed');
+        main.classList.add('shifted');
+      }
     }
-
+  
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       const main = document.querySelector('main');
       sidebar.classList.toggle('closed');
       main.classList.toggle('shifted');
     }
-
+  
     // Fermer le menu automatiquement sur mobile au chargement
     window.addEventListener('DOMContentLoaded', () => {
       if (window.innerWidth <= 768) {
