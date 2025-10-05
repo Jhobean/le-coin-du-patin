@@ -114,13 +114,26 @@
       <h2>Bienvenue</h2>
       <p>Bienvenue sur le site du Coin du Patin, un service d’aiguisage de patins offert aux étudiants par Alexis, élève de secondaire 2.</p>
 
+      <div style="margin-top: 30px; background-color: #ecf0f1; padding: 20px; border-left: 5px solid #2c3e50; border-radius: 8px;">
+        <h3>✅ Pourquoi choisir Le coin du patin ?</h3>
+        <ul>
+          <li>Plus besoin de rapporter tes patins à la maison</li>
+          <li>Collecte et retour au Sportium</li>
+          <li>Tarifs avantageux pour les étudiants</li>
+          <li>Opéré par un étudiant passionné de hockey</li>
+        </ul>
+      </div>
+
+
+
+      <div style="margin-top: 30px; font-style: italic; color: #555;">
+        <p>Merci à tous ceux qui utilisent mon service. Chaque paire de patins aiguisée me rapproche de mes objectifs !</p>
+      </div>
     </section>
 
     <section id="service">
       <h2>Le service</h2>
-      <p>Ramassage des patins à l’école après les cours, aiguisage à domicile, et retour le lendemain matin avant le début des classes. Paiement par virement Interac.
-
-      </p>
+      <p>Ramassage des patins à l’école après les cours, aiguisage à domicile, et retour le lendemain matin avant le début des classes. Paiement par virement Interac.</p>
 
       <h3>Liste de prix</h3>
       <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
@@ -139,17 +152,68 @@
             <td style="padding: 10px; border: 1px solid #ddd;">Carte prépayée 5 aiguisages</td>
             <td style="padding: 10px; border: 1px solid #ddd;">35,00 $</td>
           </tr>
-
-
-
-
         </tbody>
-
-
       </table>
+
       <p style="color: red;">
         ***Aiguisage de patin de Gardien non possible***
       </p>
+
+      <div style="margin-top: 30px; background-color: #fefefe; padding: 20px; border-left: 5px solid #1abc9c; border-radius: 8px;">
+        <h3>📦 À mettre dans le bac</h3>
+        <ul>
+          <li>Le formulaire rempli à l’intérieur des patins</li>
+        </ul>
+      </div>
+
+
+
+      <!-- Bloc explicatif -->
+      <div style="margin-top: 20px; background-color: #ecf0f1; padding: 20px; border-left: 5px solid #2c3e50; border-radius: 8px;">
+        <h3>🏒 Quel coupe de lame choisir ?</h3>
+        <p>La coupe des patins influence la maniabilité et la stabilité sur la glace. Voici les options disponibles :</p>
+        <ul>
+          <li><strong>1/2</strong></li>
+          <li><strong>5/8 (coupe régulière)</strong></li>
+          <li><strong>11/16</strong></li>
+          <li><strong>1/2 Fire</strong></li>
+        </ul>
+        <p>Si tu ne sais pas quoi choisir, je peux te conseiller selon ton style de jeu. 😊</p>
+      </div>
+      <!-- Image ajoutée -->
+      <div style="margin-top: 40px; text-align: center;">
+        <img src="coupe de patin.png" alt="Illustration des coupes de lame" style="max-width: 100%; border-radius: 8px;">
+        <p style="font-size: 12px; color: #555; margin-top: 5px;">Source : Sparx Hockey</p>
+      </div>
+      <div style="margin-top: 40px; background-color: #ecf0f1; padding: 20px; border-left: 5px solid #2c3e50; border-radius: 8px;">
+        <h3>🎯 Quelle coupe te convient ?</h3>
+        <form id="quizForm">
+          <p>1. Quel est ton style de jeu ?</p>
+          <select required>
+            <option value="">Choisir...</option>
+            <option value="mordant">Explosif, virages serrés</option>
+            <option value="glisse">Rapide, longues poussées</option>
+          </select>
+
+          <p>2. Tu joues à quelle position ?</p>
+          <select required>
+            <option value="">Choisir...</option>
+            <option value="mordant">Attaquant</option>
+            <option value="glisse">Défenseur</option>
+          </select>
+
+          <p>3. Tu préfères...</p>
+          <select required>
+            <option value="">Choisir...</option>
+            <option value="mordant">Adhérence maximale</option>
+            <option value="glisse">Vitesse et fluidité</option>
+          </select>
+
+          <button type="submit" style="margin-top: 10px; background-color: #2c3e50; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Voir mon profil</button>
+        </form>
+
+        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+      </div>
     </section>
 
     <section id="fonctionnement">
@@ -192,7 +256,11 @@
       </table>
       <div style="margin-top: 40px; background-color: #ecf0f1; padding: 20px; border-left: 5px solid #2c3e50; border-radius: 8px;">
         <h3>🛠️ La machine utilisée</h3>
-        <p>Pour garantir un aiguisage précis et sécuritaire, j’utilise une sparx sharpener 3 </strong>, une machine reconnue dans le monde du hockey. Elle permet un aiguisage uniforme et adapté aux patins de joueurs, avec un contrôle optimal de la profondeur et du profil.</p>
+        <p>Pour garantir un aiguisage précis et sécuritaire, j’utilise une
+          <a href="https://www.youtube.com/watch?v=y7hxt36GnIE" target="_blank" style="color: #2c3e50; text-decoration: underline;">
+            Sparx Sharpener 3
+          </a>, une machine reconnue dans le monde du hockey. Elle permet un aiguisage uniforme et adapté aux patins de joueurs, avec un contrôle optimal de la profondeur et du profil.
+        </p>
       </div>
     </section>
     <section id="contact">
@@ -200,6 +268,7 @@
       <p>📞 Alexis Gagnon — 514-441-2813<br>
          ✉️ Paiement par virement Interac<br>
          🏫 Étudiant de secondaire 2</p>
+
     </section>
 
     <footer>
@@ -234,6 +303,23 @@
       if (window.innerWidth <= 768) {
         document.getElementById('sidebar').classList.add('closed');
         document.querySelector('main').classList.add('shifted');
+      }
+    });
+
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const selects = event.target.querySelectorAll("select");
+      let score = 0;
+
+      selects.forEach(select => {
+        if (select.value === "mordant") score++;
+      });
+
+      const result = document.getElementById("result");
+      if (score >= 2) {
+        result.textContent = "🔧 Ta coupe idéal : Plus de mordant et de contrôle.";
+      } else {
+        result.textContent = "🧊 Ta coupe idéal : Plus de glisse et de vitesse.";
       }
     });
   </script>
