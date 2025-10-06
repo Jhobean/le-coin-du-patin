@@ -46,7 +46,8 @@
         </nav>
         <section id="service">
 
-            <section class="page-section about-heading">
+
+            <section class="page-section">
                 <div class="container">
                     <div class="about-heading-content">
                         <div class="row">
@@ -89,19 +90,21 @@
                 </div>
             </div>
 
-            <div class="product-item-description d-flex me-auto">
-                <div class="bg-faded p-4 rounded">
-                  <p class="mb-0">
-                    <h3>🏒 Quelle coupe de lame choisir?</h3>
-                    <p>La coupe des patins influence la maniabilité et la stabilité sur la glace. Voici les options disponibles:</p>
-                    <ul>
-                      <li><strong>1/2</strong></li>
-                      <li><strong>5/8 (coupe régulière)</strong></li>
-                      <li><strong>11/16</strong></li>
-                      <li><strong>1/2 Fire</strong></li>
-                    </ul>
-                    <p>Si tu ne sais pas quoi choisir, je peux te conseiller selon ton style de jeu. 😊</p>
-                  </p>
+            <div class="container">
+                <div class="row">
+                  <div class="col-xl-9 mx-auto">
+                    <div class="bg-faded p-4 rounded">
+                      <h3 class="mb-3">🏒 Quelle coupe de lame choisir?</h3>
+                      <p>La coupe des patins influence la maniabilité et la stabilité sur la glace. Voici les options disponibles:</p>
+                      <ul>
+                        <li><strong>1/2</strong></li>
+                        <li><strong>5/8 (coupe régulière)</strong></li>
+                        <li><strong>11/16</strong></li>
+                        <li><strong>1/2 Fire</strong></li>
+                      </ul>
+                      <p>Si tu ne sais pas quoi choisir, je peux te conseiller selon ton style de jeu. 😊</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -111,41 +114,49 @@
               <p style="font-size: 12px; color: white; margin-top: 5px;">Source: Sparx Hockey</p>
             </div>
 
+            <section class="page-section">
+            <div class="container">
+                <div class="row">
+                  <div class="col-xl-9 mx-auto">
+                    <div class="bg-faded p-4 rounded">
+                      <h3 class="mb-3">🎯 Quelle coupe te convient?</h3>
+                      <form id="quizForm">
+                        <div class="mb-3">
+                          <label for="styleJeu" class="form-label">1. Quel est ton style de jeu?</label>
+                          <select id="styleJeu" class="form-select" required>
+                            <option value="">Choisir...</option>
+                            <option value="mordant">Explosif, virages serrés</option>
+                            <option value="glisse">Rapide, longues poussées</option>
+                          </select>
+                        </div>
 
-            <div class="product-item-description d-flex me-auto">
-                <div class="bg-faded p-4 rounded">
-                  <p class="mb-0">
-                    <h3>🎯 Quelle coupe te convient?</h3>
-                    <form id="quizForm">
-                      <p>1. Quel est ton style de jeu?</p>
-                      <select required>
-                        <option value="">Choisir...</option>
-                        <option value="mordant">Explosif, virages serrés</option>
-                        <option value="glisse">Rapide, longues poussées</option>
-                      </select>
-                      <p>2. Tu joues à quelle position?</p>
-                        <select required>
+                        <div class="mb-3">
+                          <label for="position" class="form-label">2. Tu joues à quelle position?</label>
+                          <select id="position" class="form-select" required>
                             <option value="">Choisir...</option>
                             <option value="mordant">Attaquant</option>
                             <option value="glisse">Défenseur</option>
-                        </select>
+                          </select>
+                        </div>
 
-                        <p>3. Tu préfères...</p>
-                        <select required>
+                        <div class="mb-3">
+                          <label for="preference" class="form-label">3. Tu préfères...</label>
+                          <select id="preference" class="form-select" required>
                             <option value="">Choisir...</option>
                             <option value="mordant">Adhérence maximale</option>
                             <option value="glisse">Vitesse et fluidité</option>
-                        </select>
+                          </select>
+                        </div>
 
-          <button type="submit" style="margin-top: 10px; background-color: #2c3e50; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Voir mon profil</button>
-        </form>
+                        <button type="submit" class="btn btn-dark mt-3">Voir mon profil</button>
+                      </form>
 
-        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
-      </div>
-                  </p>
+                      <div id="result" class="mt-4 fw-bold"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
+            </section>
 
 
         <footer class="footer text-faded text-center py-5">

@@ -70,65 +70,89 @@
                 </div>
             </div>
         </section>
-        <section class="page-section">
-            <div class="container">
-                <div class="product-item">
-                    <div class="product-item-title d-flex">
-                        <div class="bg-faded p-5 d-flex me-auto rounded">
-                            <h2 class="section-heading mb-0">
-                                <span class="section-heading-lower">Horaire</span>
-                                <table style="width: 100%; font-size: 14px; border-collapse: collapse; margin-top: 20px;">
-                                    <thead>
-                                      <tr style="background-color: #2c3e50; color: white;">
-                                        <th style="padding: 6px; border: 1px solid #ddd;">Jour</th>
-                                        <th style="padding: 6px; border: 1px solid #ddd;">Heure</th>
-                                        <th style="padding: 6px; border: 1px solid #ddd;">Type</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Lundi</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">14h30–14h45</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Ramassage</td>
-                                      </tr>
-                                      <tr style="background-color: #f9f9f9;">
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Mardi</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">7h45–8h15</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Retour</td>
-                                      </tr>
-                                      <tr>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Mercredi</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">14h30–14h45</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Ramassage</td>
-                                      </tr>
-                                      <tr style="background-color: #f9f9f9;">
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Jeudi</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">7h45–8h15</td>
-                                        <td style="padding: 6px; border: 1px solid #ddd;">Retour</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                            </h2>
-                        </div>
-                    </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-02.jpg" alt="..." />
-                </div>
-            </div>
-        </section>
 
-        <div class="product-item-description d-flex me-auto">
-            <div class="bg-faded p-4 rounded">
-              <p class="mb-0">
-                <h3>🛠️ La machine utilisée</h3>
-                <p>Pour garantir un aiguisage précis et sécuritaire, j’utilise une
-                  <a href="https://www.youtube.com/watch?v=y7hxt36GnIE" target="_blank" style="color: #2c3e50; text-decoration: underline;">
-                    Sparx Sharpener 3
-                  </a>,<br> une machine reconnue dans le monde du hockey. Elle permet un aiguisage uniforme<br>
-                  et adapté aux patins de joueurs, avec un contrôle optimal de la profondeur et du profil.
-                </p>
-              </p>
+        <style>
+          .horaire-table td,
+          .horaire-table th {
+            padding: 6px;
+            border: 1px solid #ddd;
+          }
+
+          .horaire-table thead {
+            background-color: #2c3e50;
+            color: white;
+          }
+
+          .horaire-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+        </style>
+
+        <section class="page-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 mx-auto">
+                <div class="bg-faded p-4 rounded">
+                  <h2 class="section-heading mb-4 text-center">
+                    <span class="section-heading-lower">Horaire</span>
+                  </h2>
+                  <table class="horaire-table" style="width: 100%; font-size: 14px; border-collapse: collapse;">
+                    <thead>
+                      <tr>
+                        <th>Jour</th>
+                        <th>Heure</th>
+                        <th>Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Lundi</td>
+                        <td>14h30–14h45</td>
+                        <td>📦 Ramassage</td>
+                      </tr>
+                      <tr>
+                        <td>Mardi</td>
+                        <td>7h45–8h15</td>
+                        <td>🔁 Retour</td>
+                      </tr>
+                      <tr>
+                        <td>Mercredi</td>
+                        <td>14h30–14h45</td>
+                        <td>📦 Ramassage</td>
+                      </tr>
+                      <tr>
+                        <td>Jeudi</td>
+                        <td>7h45–8h15</td>
+                        <td>🔁 Retour</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+
+        <section class="page-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 mx-auto">
+              <div class="bg-faded p-4 rounded">
+                <h3 class="mb-3">🛠️ La machine utilisée</h3>
+                <p>
+                  Pour garantir un aiguisage précis et sécuritaire, j’utilise une
+                  <a href="https://www.youtube.com/watch?v=y7hxt36GnIE" target="_blank" style="color: #2c3e50; text-decoration: underline;">
+                    Sparx Sharpener 3
+                  </a>, une machine reconnue dans le monde du hockey.
+                </p>
+                <p>
+                  Elle permet un aiguisage uniforme et adapté aux patins de joueurs, avec un contrôle optimal de la profondeur et du profil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Le Coin du Patin 2025</p></div>
