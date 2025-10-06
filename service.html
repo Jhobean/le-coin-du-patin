@@ -24,11 +24,25 @@
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">Le Coin Du Patin</span>
+            <div class="site-heading d-none d-lg-flex align-items-center justify-content-center text-faded">
+              <img src="assets/img/logo.png" alt="Logo Le Coin du Patin" style="max-width: 100px;" class="me-4" />
+              <div class="text-start">
+                <h1 class="mb-0">
+                  <span class="site-heading-upper text-primary mb-2 d-block">Le Coin Du Patin</span>
+                  <span class="site-heading-lower d-block">Aiguisage de patin</span>
+                </h1>
+              </div>
+            </div>
+
+            <!-- Version mobile -->
+            <div class="site-heading text-center text-faded d-lg-none">
+              <img src="assets/img/logo.png" alt="Logo Le Coin du Patin" style="max-width: 80px;" class="mb-3" />
+              <h1>
+                <span class="site-heading-upper text-primary mb-2">Le Coin Du Patin</span>
                 <span class="site-heading-lower">Aiguisage de patin</span>
-            </h1>
-        </header>
+              </h1>
+            </div>
+          </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
@@ -48,22 +62,43 @@
 
 
             <section class="page-section">
-                <div class="container">
-                    <div class="about-heading-content">
-                        <div class="row">
-                            <div class="col-xl-9 col-lg-10 mx-auto">
-                                <div class="bg-faded rounded p-5">
-                                    <h2 class="section-heading mb-4">
-                                        <span class="section-heading-upper">Le service</span>
-                                        <span class="section-heading-lower">Ce que j'offre</span>
-                                    </h2>
-                                    Ramassage des patins à l'école après les cours, aiguisage à domicile, et retour le lendemain matin avant le début des classes. Paiement par virement Interac.</p>
+                <style>
+                    .slogan {
+                      font-weight: bold;
+                      font-size: 1.2rem;
+                      color: #2c3e50;
+                      opacity: 0;
+                      transform: translateY(20px);
+                      animation: fadeInUp 1s ease forwards;
+                      animation-delay: 0.3s;
+                    }
 
-                                </div>
-                            </div>
+                    @keyframes fadeInUp {
+                      to {
+                        opacity: 1;
+                        transform: translateY(0);
+                      }
+                    }
+                  </style>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xl-9 mx-auto">
+                        <div class="bg-faded p-4 rounded text-center">
+                          <h3 class="mb-3">🧊 Le service offert</h3>
+                          <p class="slogan mb-4">
+                            Aiguisé pour performer, pensé pour les étudiants.
+                          </p>
+                          <ul class="list-unstyled step-list">
+                            <li class="mb-3">📍 Ramassage des patins à l’école après les cours</li>
+                            <li class="mb-3">🛠️ Aiguisage à domicile avec machine professionnelle</li>
+                            <li class="mb-3">📥 Retour le lendemain matin avant les classes</li>
+                            <li class="mb-3">💸 Paiement simple par virement Interac</li>
+                          </ul>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
             </section>
 
             <div class="container">

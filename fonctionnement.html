@@ -23,12 +23,26 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">Le Coin Du Patin</span>
-                <span class="site-heading-lower">Aiguisage de patin</span>
+      <header>
+        <div class="site-heading d-none d-lg-flex align-items-center justify-content-center text-faded">
+          <img src="assets/img/logo.png" alt="Logo Le Coin du Patin" style="max-width: 100px;" class="me-4" />
+          <div class="text-start">
+            <h1 class="mb-0">
+              <span class="site-heading-upper text-primary mb-2 d-block">Le Coin Du Patin</span>
+              <span class="site-heading-lower d-block">Aiguisage de patin</span>
             </h1>
-        </header>
+          </div>
+        </div>
+
+        <!-- Version mobile -->
+        <div class="site-heading text-center text-faded d-lg-none">
+          <img src="assets/img/logo.png" alt="Logo Le Coin du Patin" style="max-width: 80px;" class="mb-3" />
+          <h1>
+            <span class="site-heading-upper text-primary mb-2">Le Coin Du Patin</span>
+            <span class="site-heading-lower">Aiguisage de patin</span>
+          </h1>
+        </div>
+      </header>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
@@ -44,31 +58,48 @@
                 </div>
             </div>
         </nav>
+
         <section class="page-section">
-            <div class="container">
-                <div class="product-item">
-                    <div class="product-item-title d-flex">
-                        <div class="bg-faded p-5 d-flex ms-auto rounded">
-                            <h2 class="section-heading mb-0">
-                                <span class="section-heading-lower">Comment ça fonctionne</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-01.jpg" alt="..." />
-                    <div class="product-item-description d-flex me-auto">
-                        <div class="bg-faded p-5 rounded">
-                          <p class="mb-0">
-                            🎯 Localise le bac à patin au Sportium<br><br>
-                            📝 Remplis le formulaire d’aiguisage<br><br>
-                            👟 Glisse le formulaire, à l’intérieur de tes patins.<br><br>
-                            📦 Dépose tes patins / lames dans le bac prévu à cet effet, vérifie les plages de ramassage.<br><br>
-                            💸 Si requis, effectue le paiement par virement Interac <br><br>
-                            📥 Passe ramasser tes patins le lendemain matin avant les cours.<br><br>
-                          </p>
-                        </div>
-                      </div>
+          <style>
+            .step-list li {
+              opacity: 0;
+              transform: translateY(20px);
+              animation: fadeInUp 0.6s ease forwards;
+            }
+
+            .step-list li:nth-child(1) { animation-delay: 0.1s; }
+            .step-list li:nth-child(2) { animation-delay: 0.2s; }
+            .step-list li:nth-child(3) { animation-delay: 0.3s; }
+            .step-list li:nth-child(4) { animation-delay: 0.4s; }
+            .step-list li:nth-child(5) { animation-delay: 0.5s; }
+            .step-list li:nth-child(6) { animation-delay: 0.6s; }
+
+            @keyframes fadeInUp {
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          </style>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-9 mx-auto">
+                <div class="bg-faded p-4 rounded">
+                  <h3 class="mb-3 text-center">🧭 Comment ça fonctionne</h3>
+                  <ul class="list-unstyled step-list">
+                    <li class="mb-3">🎯 Localise le bac à patin au Sportium</li>
+                    <li class="mb-3">📝 Remplis le formulaire d'aiguisage</li>
+                    <li class="mb-3">👟 Glisse le formulaire à l'intérieur de tes patins</li>
+                    <li class="mb-3">📦 Dépose tes patins/lames dans le bac prévu à cet effet</li>
+                    <li class="mb-3">💸 Effectue le paiement par virement Interac si requis</li>
+                    <li class="mb-3">📥 Ramasse tes patins le lendemain matin avant les cours</li>
+                  </ul>
                 </div>
+              </div>
             </div>
+          </div>
+
         </section>
 
         <style>

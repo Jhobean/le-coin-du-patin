@@ -24,11 +24,26 @@
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">Le Coin Du Patin</span>
+            <div class="site-heading d-none d-lg-flex align-items-center justify-content-center text-faded">
+              <img src="assets/img/logo.png" alt="Logo Le Coin du Patin" style="max-width: 100px;" class="me-4" />
+              <div class="text-start">
+                <h1 class="mb-0">
+                  <span class="site-heading-upper text-primary mb-2 d-block">Le Coin Du Patin</span>
+                  <span class="site-heading-lower d-block">Aiguisage de patin</span>
+                </h1>
+              </div>
+            </div>
+
+            <!-- Version mobile -->
+            <div class="site-heading text-center text-faded d-lg-none">
+              <img src="assets/img/logo.png" alt="Logo Le Coin du Patin" style="max-width: 80px;" class="mb-3" />
+              <h1>
+                <span class="site-heading-upper text-primary mb-2">Le Coin Du Patin</span>
                 <span class="site-heading-lower">Aiguisage de patin</span>
-            </h1>
-        </header>
+              </h1>
+            </div>
+          </header>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
             <div class="container">
@@ -46,18 +61,21 @@
         </nav>
         <section class="page-section clearfix">
             <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-lower">Bienvenue <!DOCTYPE html></span>
-                        </h2>
-                        <p class="mb-3">Bienvenue au Coin du Patin, le service d'aiguisage pensé pour les étudiants du CCL.
-                            Je m'appelle Alexis, élève de secondaire 2, et j'ai créé ce service pour vous éviter de devoir rapporter vos patins à la maison juste pour les faire aiguiser. Ramassage à l'école, retour le lendemain matin — simple, rapide et pratique.
-                            </p>
+                <div class="row">
+                  <div class="col-xl-9 mx-auto">
+                    <div class="bg-faded p-4 rounded text-center">
+                      <h3 class="mb-3">👋 Bienvenue au Coin du Patin</h3>
+                      <p>
+                        Le service d'aiguisage pensé pour les étudiants du CCL.
+                        Je m'appelle Alexis, élève de secondaire 2, et j'ai créé ce service pour vous éviter de devoir rapporter vos patins à la maison seulement pour les faire aiguiser.
+                      </p>
+                      <p>
+                        Ramassage à l'école, retour le lendemain matin — simple, rapide et pratique.
+                      </p>
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
         </section>
 
         <section class="page-section">
